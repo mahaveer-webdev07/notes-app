@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>note-pad</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1><span class="logo"></span> Notepad</h1>
+      <span class="muted" id="counts"></span>
+    </header>
+
+    <div class="workspace" id="workspace">
+      <!-- Sidebar -->
+      <aside class="card sidebar">
+        <div class="row">
+          <input id="search" placeholder="Search notes..." style="flex:1;min-width:0" />
+          <button id="btn-new">+ New</button>
+        </div>
+
+        <div class="row" style="margin:10px 0">
+          <span class="muted">Sort:</span>
+          <select id="sort">
+            <option value="recent">Recent</option>
+            <option value="az">A–Z</option>
+          </select>
+        </div>
+
+        <div class="note-list" id="noteList"></div>
+      </aside>
+
+      <!-- Editor -->
+      <main class="card editor" id="editor"></main>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
